@@ -27,6 +27,18 @@ public class TeacherDao {
         return teacher;
     }
 
+    public Teacher findByTeaName(String name){
+        final Teacher teacher=new Teacher();
+        String sql="select tid,password from teacher where name=?";
+        jdbcTemplate.query(sql, new Object[]{name}, new RowCallbackHandler() {
+            @Override
+            public void processRow(ResultSet resultSet) throws SQLException {
+                teacher.setTid(resultSet.getInt(1));
+                teacher.setPassword(resultSet.getString(2));
+            }
+        });
+        return teacher;
+    }
     public int insertTeacher(Teacher teacher){
         String sql="insert into teacher(name,password) value(?,?)";
         return jdbcTemplate.update(sql,teacher.getName(),teacher.getPassword());
