@@ -4,13 +4,13 @@ public class Course {
     private int cid;
     private String name;
     private int tid;
-    private int uid;
+    private String sid;
     private int score;
 
-    public Course(String name, int tid, int uid, int score) {
+    public Course(String name, int tid, String uid, int score) {
         this.name = name;
         this.tid = tid;
-        this.uid = uid;
+        this.sid = uid;
         this.score = score;
     }
 
@@ -41,12 +41,12 @@ public class Course {
         this.tid = tid;
     }
 
-    public int getUid() {
-        return uid;
+    public String getSid() {
+        return sid;
     }
 
-    public void setUid(int uid) {
-        this.uid = uid;
+    public void setSid(String sid) {
+        this.sid = sid;
     }
 
     public int getScore() {
@@ -57,11 +57,11 @@ public class Course {
         this.score = score;
     }
 
-    public Course(int cid, String name, int tid, int uid, int score) {
+    public Course(int cid, String name, int tid, String sid, int score) {
         this.cid = cid;
         this.name = name;
         this.tid = tid;
-        this.uid = uid;
+        this.sid = sid;
         this.score = score;
     }
 }

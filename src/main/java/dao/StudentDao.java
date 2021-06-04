@@ -51,4 +51,9 @@ public class StudentDao {
         String sql="insert into student(sid,name,age,major,password) value(?,?,?,?,?)";
         return jdbcTemplate.update(sql,student.getSid(),student.getName(),student.getAge(),student.getMajor(),student.getPassword());
     }
+
+    public int updateStudent(Student student){
+        String sql="update student set name=? age=? major=? password=? where sid=?";
+        return jdbcTemplate.update(sql,student.getName(),student.getAge(),student.getMajor(),student.getPassword(),student.getSid());
+    }
 }
