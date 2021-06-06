@@ -1,11 +1,11 @@
-package interceptors;
+package com.easy.archiecture.interceptors;
 
 
-import entity.Teacher;
+import com.easy.archiecture.entity.Teacher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
-import service.TeacherServiceImpl;
+import com.easy.archiecture.service.TeacherServiceImpl;
 import support.JWTUtil;
 
 import javax.servlet.http.HttpServletRequest;

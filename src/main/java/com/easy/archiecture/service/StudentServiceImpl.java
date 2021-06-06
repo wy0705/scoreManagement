@@ -1,7 +1,7 @@
-package service;
+package com.easy.archiecture.service;
 
-import dao.StudentDao;
-import entity.Student;
+import com.easy.archiecture.dao.StudentDao;
+import com.easy.archiecture.entity.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,6 +12,10 @@ public class StudentServiceImpl {
 
     public Student findByStuId(int id){
         return studentDao.findByStuId(id);
+    }
+
+    public Student findByStuSid(String sid){
+        return studentDao.findByStuSid(sid);
     }
 
     public Student findByName(String name){

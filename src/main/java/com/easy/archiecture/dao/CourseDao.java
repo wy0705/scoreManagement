@@ -1,6 +1,6 @@
-package dao;
+package com.easy.archiecture.dao;
 
-import entity.Course;
+import com.easy.archiecture.entity.Course;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowCallbackHandler;

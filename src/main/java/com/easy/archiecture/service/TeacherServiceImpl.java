@@ -1,8 +1,7 @@
-package service;
+package com.easy.archiecture.service;
 
-import dao.StudentDao;
-import dao.TeacherDao;
-import entity.Teacher;
+import com.easy.archiecture.dao.TeacherDao;
+import com.easy.archiecture.entity.Teacher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.support.TransactionTemplate;

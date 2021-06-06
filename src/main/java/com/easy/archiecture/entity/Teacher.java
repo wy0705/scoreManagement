@@ -1,4 +1,4 @@
-package entity;
+package com.easy.archiecture.entity;
 
 public class Teacher {
     private int tid;

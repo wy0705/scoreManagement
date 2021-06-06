@@ -1,4 +1,4 @@
-package filter;
+package com.easy.archiecture.filter;
 
 import org.apache.commons.lang3.StringEscapeUtils;
 import org.apache.commons.lang3.StringUtils;

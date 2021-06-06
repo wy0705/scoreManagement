@@ -1,6 +1,6 @@
-package dao;
+package com.easy.archiecture.dao;
 
-import entity.Student;
+import com.easy.archiecture.entity.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowCallbackHandler;
@@ -25,6 +25,23 @@ public class StudentDao {
                 student.setAge(resultSet.getInt(3));
                 student.setMajor(resultSet.getString(4));
                 student.setPassword(resultSet.getString(5));
+            }
+        });
+        return student;
+    }
+
+    public Student findByStuSid(String sid){
+        final Student student=new Student();
+        String sql="select id,name,age,major.password from student where sid=?";
+        jdbcTemplate.query(sql, new Object[]{sid}, new RowCallbackHandler() {
+            @Override
+            public void processRow(ResultSet resultSet) throws SQLException {
+                student.setId(resultSet.getInt(1));
+                student.setName(resultSet.getString(2));
+                student.setAge(resultSet.getInt(3));
+                student.setMajor(resultSet.getString(4));
+                student.setPassword(resultSet.getString(5));
+
             }
         });
         return student;
