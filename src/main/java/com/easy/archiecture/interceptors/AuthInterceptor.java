@@ -2,11 +2,11 @@ package com.easy.archiecture.interceptors;
 
 
 import com.easy.archiecture.entity.Teacher;
+import com.easy.archiecture.support.JWTUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 import com.easy.archiecture.service.TeacherServiceImpl;
-import support.JWTUtil;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

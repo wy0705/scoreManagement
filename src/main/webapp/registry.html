@@ -1,7 +1,8 @@
-<%@ page language="java" import="java.util.*" pageEncoding="utf-8" %>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>登录</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
     <script src="${pageContext.request.contextPath}/js/jquery.js"></script>
     <script>
         $(function () {
@@ -9,7 +10,7 @@
                 $.ajax({
                     url: "/login",
                     type: 'POST',
-                    data: {'sid': $("#username").val(), 'password': $("#password").val()},
+                    data: {'sid': $("#name").val(), 'password': $("#password").val()},
                     success: function (data) {
                         alert(data);
                     }
@@ -20,9 +21,8 @@
     </script>
 </head>
 <body>
-<h2>登录</h2>
-<a href="${pageContext.request.contextPath}/registryPage">还没注册？</a>
-用户名<input id="username" type="text"/>
+<h2>注册</h2>
+用户名<input id="name" type="text"/>
 密码<input id="password" type="password"/>
 <input id="submit" type="submit" value="提交"/>
 </body>

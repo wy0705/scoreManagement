@@ -1,6 +1,7 @@
 package com.easy.archiecture.controller;
 
 import com.easy.archiecture.entity.Student;
+import com.easy.archiecture.support.JWTUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -8,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import com.easy.archiecture.service.StudentServiceImpl;
-import support.JWTUtil;
 
 @Controller
 public class StudentController {
