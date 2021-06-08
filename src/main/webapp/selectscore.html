@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        $(function () {
+            $("#submit").on('click', function () {
+                $.ajax({
+                    url: "/findbyns",
+                    type: 'POST',
+                    data: {'name': $("#name").val(), 'sid': $("#sid").val()},
+                    success: function (data) {
+                        alert(data);
+                    }
+                });
+            })
+        });
+    </script>
+</head>
+<body>
+学号<input id="sid" type="text">
+学科<input id="name" type="text">
+<input id="submit" type="submit" value="搜索"/>
+</body>
+</html>

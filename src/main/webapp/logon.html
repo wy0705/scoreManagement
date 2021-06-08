@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>登录</title>
     <script src="${pageContext.request.contextPath}/js/jquery.js"></script>
     <script>
         $(function () {
             $("#submit").on('click', function () {
                 $.ajax({
-                    url: "/login",
+                    url: "/logon",
                     type: 'POST',
-                    data: {'sid': $("#name").val(), 'password': $("#password").val()},
+                    data: {'username': $("#username").val(), 'password': $("#password").val()},
                     success: function (data) {
                         alert(data);
                     }
@@ -22,8 +22,8 @@
 </head>
 <body>
 <h2>注册</h2>
-用户名<input id="name" type="text"/>
+用户名<input id="username" type="text"/>
 密码<input id="password" type="password"/>
-<input id="submit" type="submit" value="提交"/>
+<input id="submit" type="submit" value="确定"/>
 </body>
 </html>

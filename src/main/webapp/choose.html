@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择页面</title>
+    <script src="${pageContext.request.contextPath}/js/jquery.js"></script>
+    <script>
+        function jump1() {
+            window.location.herf="addStudent.html";
+        }
+        function jump2() {
+            window.location.herf="addCourse.html";
+        }
+
+    </script>
+</head>
+<body>
+<h2>选择功能</h2>
+<input type="button" value="添加学生用户" onclick="jump1()"/>
+<input type="button" value="添加学生成绩" onclick="jump2()"/>
+</body>
+</html>

@@ -15,15 +15,15 @@ public class StudentController {
     @Autowired
     private StudentServiceImpl studentService;
 
-    @RequestMapping(value = "login",method = RequestMethod.POST)
+    @RequestMapping(value = "addstudnet",method = RequestMethod.POST)
     @ResponseBody
-    public String login(String sid,String password){
-        Student student=new Student();
-        if (student==null||student.getName()==null){
-            return "用户不存在或用户名、密码错误";
+    public String addstudent(String sid,String name,int age,String major,String password){
+        Student student=new Student(sid,name,age,major,password);
+        if (student==null||student.getName()==null||student.getSid()==null||student.getPassword()==null){
+            return "用户名、密码和学号不能为空";
         }
-        String sign= JWTUtil.sign(student,60L * 1000L * 30L);
-        return "hello"+student.getName()+"token:"+sign;
+        studentService.insertStudent(student);
+        return student.getName()+"信息创建成功！";
     }
 
     @RequestMapping(value = "find_name",method = RequestMethod.GET)

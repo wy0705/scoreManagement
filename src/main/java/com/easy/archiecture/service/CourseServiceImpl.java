@@ -20,6 +20,10 @@ public class CourseServiceImpl {
         return courseDao.findByCouName(name);
     }
 
+    public Course findByNameAndSid(String name,String sid){
+        return courseDao.findByNameAndSid(name,sid);
+    }
+
     public List<Integer> findByCouTea(int tid){
         return courseDao.findByCouTea(tid);
     }

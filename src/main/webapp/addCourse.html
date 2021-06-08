@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加成绩</title>
+    <script src="${pageContext.request.contextPath}/js/jquery.js"></script>
+    <script>
+        $(function () {
+            $("#submit").on('click', function () {
+                $.ajax({
+                    url: "/addcou",
+                    type: 'POST',
+                    data: {'name': $("#name").val(), 'tid': $("#tid").val(),'sid':$("#sid").val(),'score':$("#score").val()},
+                    success: function (data) {
+
+                        alert(data);
+                    }
+                });
+            })
+        });
+
+    </script>
+</head>
+<body>
+<h2>添加成绩</h2>
+科目名<input id="name" type="text"/>
+老师id号<input id="tid" type="text"/>
+学号<input id="sid" type="text">
+分数<input id="score" type="text">
+<input id="submit" type="submit" value="添加"/>
+</body>
+</html>
